@@ -18,6 +18,18 @@ public class HandOfCards {
         return hand.get(index);
     }
 
+    public void addCard (PlayingCard newCard){
+
+        hand.add(newCard);
+    }
+
+    public void addHand (ArrayList<PlayingCard> newHand){
+        for (PlayingCard card : newHand){
+            hand.add(card);
+        }
+
+    }
+
     public void clearDeck (){
         hand.clear();
     }

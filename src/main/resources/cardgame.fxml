@@ -6,25 +6,25 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="no.ntnu.idatg2001.CardGameController">
    <children>
-      <Button layoutX="428.0" layoutY="76.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="82.0" text="Deal hand" />
-      <Button layoutX="428.0" layoutY="142.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="82.0" text="Check hand" />
-      <Label layoutX="25.0" layoutY="29.0" prefHeight="206.0" prefWidth="389.0" text="Display" />
-      <Label layoutX="156.0" layoutY="253.0" prefHeight="29.0" prefWidth="71.0" text="Sum">
+      <Button id="dealHandButton" fx:id="dealHandButton" layoutX="428.0" layoutY="76.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="82.0" onMouseClicked="#dealHand" text="Deal hand" />
+      <Button id="checkHandButton" fx:id="checkHandButton" layoutX="428.0" layoutY="142.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="82.0" onMouseClicked="#checkHand" text="Check hand" />
+      <Label id="displayCards" fx:id="displayCards" layoutX="25.0" layoutY="29.0" prefHeight="206.0" prefWidth="389.0" text="Display" />
+      <Label id="sumOfFaces" fx:id="sumOfFaces" layoutX="156.0" layoutY="253.0" prefHeight="29.0" prefWidth="71.0" text="Sum">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="156.0" layoutY="304.0" prefHeight="29.0" prefWidth="43.0" text="Flush">
+      <Label id="flush" fx:id="flush" layoutX="156.0" layoutY="304.0" prefHeight="29.0" prefWidth="43.0" text="Flush">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="414.0" layoutY="253.0" prefHeight="29.0" prefWidth="122.0" text="Cards of hearts">
+      <Label id="cardsOfHearts" fx:id="cardsOfHearts" layoutX="414.0" layoutY="253.0" prefHeight="29.0" prefWidth="122.0" text="Cards of hearts">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="414.0" layoutY="299.0" prefHeight="29.0" prefWidth="122.0" text="Queen of spades">
+      <Label id="queenOfSpades" fx:id="queenOfSpades" layoutX="414.0" layoutY="299.0" prefHeight="29.0" prefWidth="122.0" text="Queen of spades">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>

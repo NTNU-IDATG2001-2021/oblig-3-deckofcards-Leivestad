@@ -3,46 +3,50 @@ package no.ntnu.idatg2001;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-
-import java.io.FileNotFoundException;
-import java.util.ArrayList;
+import javafx.scene.input.MouseEvent;
 
 public class CardGameController {
     private final DeckOfCards deck = new DeckOfCards();
     private HandOfCards hand;
+    int n = 5;
 
     @FXML
     public Button dealHandButton;
     @FXML
-    public Label dealHandText;
+    public Label displayCards;
     @FXML
     public Button checkHandButton;
     @FXML
-    public Label flushText;
+    public Label flush;
     @FXML
     public Label queenOfSpades;
     @FXML
     public Label sumOfFaces;
     @FXML
-    public Label cardsOfHearth;
+    public Label cardsOfHearts;
 
     public void dealHand() {
         hand.clearDeck();
-        dealFive();
-        dealHandText.setText(hand.toString());
+        hand.addHand(deck.dealHand(n));
+        displayCards.setText(hand.toString());
 
         displayCards();
     }
 
-    public void dealFive() {
+
+
+    /*public void dealFive() {
         this.hand = new HandOfCards(deck.dealHand(5));
         System.out.println("5 cards dealt");
     }
 
+     */
+
     public void displayCards(){
-        dealHandText.setText(hand.toString());
+        displayCards.setText(hand.toString());
     }
 
 
-
+    public void checkHand(MouseEvent mouseEvent) {
+    }
 }
