@@ -6,14 +6,16 @@ import java.util.List;
 import java.util.Random;
 
 /**
- *
+ * DeckOfCards class
+ * @Author Niklas Leivestad
+ * Version 15.04.2021
  */
-public class DeckOfCards {
+class DeckOfCards {
 
     private final char[] suit = { 'S', 'H', 'D', 'C' };
     private final PlayingCard[] deckOfCards = new PlayingCard[52];
 
-    /**
+    /**Constructor getting all 52 unique cards
      *
      */
     public DeckOfCards()
@@ -35,8 +37,9 @@ public class DeckOfCards {
     }
 
     /**
+     * ArrayList containing n number of cards, up to 52 unique ones.
      * @param n
-     * @return
+     * @return handOfCards ArrayList
      * @throws IllegalArgumentException
      */
     public ArrayList<PlayingCard> dealHand(int n) throws IllegalArgumentException {
@@ -58,7 +61,7 @@ public class DeckOfCards {
 
     }
 
-    /**
+    /** toString
      * @return
      */
     @Override
@@ -68,6 +71,11 @@ public class DeckOfCards {
                 '}';
     }
 
+    /**
+     * getCard for testing
+     * @param index
+     * @return
+     */
     public String getCard(int index) {
         return deckOfCards[index].getAsString();
     }

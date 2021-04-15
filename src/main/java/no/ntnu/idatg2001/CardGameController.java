@@ -5,6 +5,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 
+/**
+ * CardGameController class
+ * This is where the fxml.file communicates to the java.files
+ *
+ * @Author Niklas Leivestad
+ * Version 15.04.2021
+ */
 public class CardGameController {
     private final DeckOfCards deck = new DeckOfCards();
     private HandOfCards hand;
@@ -25,12 +32,17 @@ public class CardGameController {
     @FXML
     public Label cardsOfHearts;
 
+    /**
+     * dealHand button method.
+     * Starting clearing out, adding hand
+     * and displaying in text format
+     */
     public void dealHand() {
         hand.clearDeck();
         hand.addHand(deck.dealHand(n));
         displayCards.setText(hand.toString());
 
-        displayCards();
+        //displayCards();
     }
 
 
@@ -42,11 +54,28 @@ public class CardGameController {
 
      */
 
+    /**
+     *
+     */
     public void displayCards(){
         displayCards.setText(hand.toString());
     }
 
 
-    public void checkHand(MouseEvent mouseEvent) {
+    /**
+     * Method for cheking hand button
+     * Checks your hand of several things
+     *  the sum, queen of spades, flush and number of heart cards.
+     *
+     */
+    public void checkHand() {
+
+        sumOfFaces.setText(String.valueOf(hand.sumOfCards()));
+
+        if(hand.queenOfSpades()){
+            queenOfSpades.setText("Yes");
+        } else {
+            queenOfSpades.setText("no");
+        }
     }
 }

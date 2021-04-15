@@ -10,10 +10,18 @@ import javafx.stage.Stage;
 
 
 /**
- * JavaFX App
+ * JavaFX Main method
+ * @Author Niklas Leivestad
+ * Version 15.04.2021
  */
-public class App extends Application {
+public class Main extends Application {
 
+
+    /**
+     * Sets up the stage for the cardgame
+     * @param stage
+     * @throws Exception
+     */
     @Override
     public void start(Stage stage) throws  Exception{
         Parent root = FXMLLoader.load(getClass().getResource("/cardgame.fxml."));

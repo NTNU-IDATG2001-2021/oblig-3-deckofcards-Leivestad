@@ -84,7 +84,7 @@
                         <!-- Usage: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>no.ntnu.idatg2001.App</mainClass>
+                            <mainClass>no.ntnu.idatg2001.Main</mainClass>
                         </configuration>
                     </execution>
                 </executions>
