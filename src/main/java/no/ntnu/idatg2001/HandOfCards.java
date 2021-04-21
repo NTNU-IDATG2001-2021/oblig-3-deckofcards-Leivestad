@@ -10,7 +10,7 @@ import java.util.ArrayList;
  */
 public class HandOfCards {
 
-    private ArrayList<PlayingCard> hand;
+    private ArrayList<PlayingCard> hand = new ArrayList<>();
 
     /**
      * Constructor for a hand of cards, new ArrayList
@@ -72,8 +72,6 @@ public class HandOfCards {
 
     @Override
     public String toString() {
-        return "HandOfCards{" +
-                "hand=" + hand +
-                '}';
+        return  hand +" ";
     }
 }

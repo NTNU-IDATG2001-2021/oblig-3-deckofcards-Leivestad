@@ -51,4 +51,9 @@ public class PlayingCard {
     public int getFace() {
         return face;
     }
+
+    @Override
+    public String toString() {
+        return suit + "" +face + " ";
+    }
 }

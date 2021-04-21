@@ -3,7 +3,6 @@ package no.ntnu.idatg2001;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.input.MouseEvent;
 
 /**
  * CardGameController class
@@ -14,7 +13,7 @@ import javafx.scene.input.MouseEvent;
  */
 public class CardGameController {
     private final DeckOfCards deck = new DeckOfCards();
-    private HandOfCards hand;
+    private final HandOfCards hand = new HandOfCards();
     int n = 5;
 
     @FXML
@@ -32,6 +31,7 @@ public class CardGameController {
     @FXML
     public Label cardsOfHearts;
 
+
     /**
      * dealHand button method.
      * Starting clearing out, adding hand
@@ -40,9 +40,9 @@ public class CardGameController {
     public void dealHand() {
         hand.clearDeck();
         hand.addHand(deck.dealHand(n));
-        displayCards.setText(hand.toString());
+        //displayCards.setText(hand.toString());
 
-        //displayCards();
+        displayCards();
     }
 
 
